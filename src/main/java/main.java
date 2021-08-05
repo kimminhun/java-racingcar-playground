@@ -3,7 +3,7 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        CarInput carInput = new CarInput();
+        RacingInfo carInput = new RacingInfo();
         List<String> ar = carInput.carInfo();
         System.out.println(ar);
     }

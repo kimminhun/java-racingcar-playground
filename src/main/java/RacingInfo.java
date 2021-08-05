@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class CarInput {
+public class RacingInfo {
 
     public List<String> carInfo() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,5 +17,13 @@ public class CarInput {
         }
         return carinfo;
     }
+
+    public int tryNum() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("시도할 횟수는 몇회인가요?");
+        int tryNum = Integer.parseInt(br.readLine());
+        return tryNum;
+    }
+
 
 }
