@@ -1,19 +1,20 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class RacingInfo {
 
-    public List<String> carInfo() throws IOException {
+    public Queue<Car> carInfo() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분.");
         StringTokenizer st = new StringTokenizer(br.readLine(), ",");
-        List<String> carinfo = new ArrayList<>();
+        Queue<Car> carinfo = new LinkedList<>();
         while (st.hasMoreTokens()){
-            carinfo.add(st.nextToken());
+            Car c=new Car();
+            c.name=st.nextToken();
+            c.location=0;
+            carinfo.add(c);
         }
         return carinfo;
     }
